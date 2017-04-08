@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // app.set('view engine', 'handlebars');
 app.use('/public', express.static('public'));
 
+app.get('/', function(req, res) {
+  res.sendFile(path.join('public/index.html'))
+})
 
 app.get('/api/generate', function(req, res) {
     /* For this endpoint, all you have to do is return the states, and
