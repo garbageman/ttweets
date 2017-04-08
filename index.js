@@ -33,7 +33,7 @@ app.get('/api/generate', function(req, res) {
 
 
 markov.loadJsonFile().then(() => {
-  app.listen(3000, function() {
+  app.listen(process.env.PORT || 3000, function() {
       console.log('App listening on port 3000!');
   });
 });
