@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+var markov = require('./js/markov');
 // var exphbs = require('express-handlebars');
 
 
@@ -21,8 +22,9 @@ app.get('/api/generate', function(req, res) {
     /* For this endpoint, all you have to do is return the states, and
      * whatever information is necessary to link them to their own
      * /state/:statename endpoint. */
-
-    res.send('lmao')
+    markov.jsonFileSentence().then( result =>{
+      res.send(result)
+    })
 })
 
 app.listen(3000, function() {
