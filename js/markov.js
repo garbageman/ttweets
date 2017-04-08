@@ -14,13 +14,14 @@ const options = {
 var markov;
 
 /* Eventually this should be an api */
-loadJsonFile('misc/data.json').then(data => {
-    /* Generate a markov chain */
-    markov = new Markov(data, options);
-    markov.buildCorpus();
-});
 
 /* Return sentence from file */
 exports.jsonFileSentence = () => {
   return markov.generateSentence();
 };
+
+exports.loadJsonFile = () => loadJsonFile('misc/data.json').then(data => {
+    /* Generate a markov chain */
+    markov = new Markov(data, options);
+    return markov.buildCorpus();
+});
