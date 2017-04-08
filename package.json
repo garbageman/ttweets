@@ -1,10 +1,11 @@
 {
-  "name": "tweets",
+  "name": "tweettweet",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
     "morgan": "^1.8.1",
     "normalize.css": "^6.0.0",
     "underscore": "^1.8.3"
+  },
+  "engines" : {
+    "node" : "6.10.0"
   }
 }
