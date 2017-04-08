@@ -31,6 +31,9 @@ app.get('/api/generate', function(req, res) {
     })
 })
 
-app.listen(3000, function() {
-    console.log('App listening on port 3000!');
+
+markov.loadJsonFile().then(() => {
+  app.listen(3000, function() {
+      console.log('App listening on port 3000!');
+  });
 });
