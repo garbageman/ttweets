@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var markov = require('./js/markov');
+var path = require('path');
 // var exphbs = require('express-handlebars');
 
 
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/public', express.static('public'));
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join('public/index.html'))
+  res.sendFile(path.join(__dirname+'/public/index.html'));
 })
 
 app.get('/api/generate', function(req, res) {
