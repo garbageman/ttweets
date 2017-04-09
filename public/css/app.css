@@ -48,6 +48,8 @@
 
 .loading-container {
   display: none;
+  margin-top: 30;
+  margin-bottom: 20;
 }
 
 .content-title {

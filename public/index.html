@@ -15,8 +15,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" href="#">MC Donald</a>
     </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/public/about.html">About <span class="sr-only">(current)</span></a></li>
+      </ul>
+   </div>
   </nav>
   <div class="title-container">
     <div class="title">
@@ -36,51 +41,6 @@
   </div>
   <div class='button-container'>
     <button id='activate' class='btn btn-primary' >Generate Tweet</button>
-  </div>
-  <div class="content-container">
-    <div class="content-title">
-      What exactly is a Markov Chain?
-    </div>
-    <div class="content-info">
-      To understand what a Markov chain is, first consider a problem
-      that it is trying to solve. Given a set of states, and probabilities of
-      transitioning from some state S<sub>i</sub> to some state S<sub>j</sub>,
-      can we predict the sequence that will likely come from some state S<sub>k</sub>?
-      <p><p>
-      We can generate a possible sequence, by looking at potential transitions from
-      S<sub>k</sub> and make an educated guess at what the next state will be.
-      An easy way to organize all of the potential transitions, is in a transition
-      matrix. Here is an example of a transition matrix that only involves the
-      states R, N and S.
-    </div>
-    <div class="content-image">
-      <img class="matrix-img" src="/public/img/TransitionMatrix.png"></img>
-    </div>
-    <div class="content-info">
-      In this matrix, the value at position <i>i,j</i> in the matrix is equal to
-      the probability that given the current state is S<sub>i</sub> that
-      the next state will be S<sub>j</sub>. For example, half the time R will
-      actually loop back to itself, which is why R,R has a value of 1/2. One
-      fourth of the time, R will transition to N, so R,N has a value of 1/4.
-      In order to generate a sequence, a starting state is picked, and then each
-      consecutive state will be picked based on the probability given in the matrix.
-      <p><p>
-      What is great about this, is given a large number of sequences, we can
-      create our own probability matrix by counting each transition between some
-      S<sub>i</sub> and some S<sub>j</sub>. For example, if we find that throughout
-      all of our sequences, S<sub>1</sub> goes to S<sub>2</sub> 5 times,
-      S<sub>1</sub> goes to S<sub>0</sub> 2 times and S<sub>1</sub> goes to S<sub>1</sub> 3 times,
-      then the probability of S<sub>1</sub> going to S<sub>0</sub>, S<sub>1</sub> and S<sub>2</sub>
-      is .2, .3 and .5 respectively. When we decide to generate a new sequence,
-      if we are at S<sub>1</sub> then the next state will be S<sub>0</sub> one fifth of the time,
-      S<sub>1</sub> three tenths of the time, and S<sub>2</sub> half the time.
-      <p><p>
-      These sequences can be created by any seqential data. In our example here, we are using
-      tweets. Each state is a word in a tweet. We scan over hundreds of thousands
-      of tweets to create this matrix that will tell us given the word "and", what are the likely
-      words that Donald Trump will say next? This can be saved in a matrix as described above and
-      used to create new sentences that will sound similar to the sentences that he has created himself!
-    </div>
   </div>
 </body>
 <footer>
