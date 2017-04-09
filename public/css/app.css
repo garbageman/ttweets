@@ -6,6 +6,7 @@
 
 .tweet-container {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .but {
@@ -27,4 +28,36 @@
 
 .twitter-tweet .twitter-tweet-rendered {
   margin:auto;
+}
+
+.title-container {
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 10rem;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.loading-container {
+  display: none;
+}
+
+.content-title {
+  font-size: 3rem;
+  width: 40%;
+  margin: auto;
+  margin-top: 20;
+}
+
+.ccontent-info {
+  font-size: 1rem;
+  width: 40%;
+  margin: auto;
+  margin-top: 20;
 }
